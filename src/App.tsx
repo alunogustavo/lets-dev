@@ -1,11 +1,9 @@
+import { FormBasico, FormCompleto, Callback, Promise, AsyncAwait, Home, ConsumindoApis } from "./telas";
+
 function App() {
-    return (
-       <div>
-        <h1>
-            Olá Mundo!
-        </h1>
-       </div>
-    )
+  
+    return <Home />;
 }
 
-export default App
+export default App;
+

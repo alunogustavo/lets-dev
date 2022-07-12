@@ -1,0 +1,129 @@
+#container {
+    /* definir o item em coluna */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* limite o conteudo para conter nos notebooks */
+    max-width: 1200px;
+
+    /* espaço interno dos elementos */
+    padding: 90px;
+}
+
+#container h1 {
+    /* Peso da fonte, linhamneto e margem */
+    font-weight: 600;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#container h2 {
+    text-align: center;
+}
+
+#container p#instrucao {
+    text-align: center;
+    margin: 20px 0 60px 0 
+}
+
+#container img {
+    width: 600px;
+}
+
+#container hr {
+   background: #e5e5e5;
+   height: 1px;
+   width: 100px;
+   margin: 100px 0 35px 0;
+}
+#container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#container form p#aviso {
+    font-weight: 500; 
+    margin-bottom: 100px;
+}
+
+form p#aviso strong {
+    font-weight: 600;
+}
+
+form div.column-input {
+    /* ALinha todos os labels em coluna com seus respectivos inputs */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 70px;
+}
+
+form label {
+    font-weight: 500;
+}
+
+.column-input input[type="text"],
+input[type="number"],
+input[type="submit"],
+select,
+textarea,
+button {
+    /* Padroniza o estilo dos inputs */
+    border: 1px solid #201e1f;
+    padding: 10px;
+    height: 35px;
+}
+
+form .row {
+    /* Alinhe Horizoltamente */
+    display: flex;
+    width: 100%;
+    gap: 60px;
+}
+
+.column-input.input-text {
+    /* Faz o input usar 50% do container dele */
+    width: 50%;
+}
+
+.column-input.select {
+    /* Faz o input usar 30% do container dele */
+    width: 30%;
+}
+
+.column-input.select select {
+    /* Ajusta ao espaçamento, pois o que padroniza zoa só o select */
+    padding: 0 5px;
+}
+
+form .row-selectors {
+    /* Alinhe os radio button com seus respectivos labels */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+form .row-selectors input [type="radio"] {
+    /* Aumenta o tamanho dos radios button */
+    width: 25px;
+    height: 25px;
+}
+
+form .row-selectors label {
+    /* Coloca os labels dos radio button com a fonte padrão novamente */
+    font-weight: 400;
+}
+
+form textarea {
+    min-height: 100px;
+    max-width: 200px;
+    min-width: 50%;
+    max-width: 100%;
+}
+
+form button {
+    padding: 5px 20px;
+}
