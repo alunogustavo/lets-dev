@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Logo } from "../../imagens";
+import { logo } from "../../imagens";
 import * as s from "./styled-card";
 
 interface CardProps {
@@ -11,7 +11,7 @@ interface CardProps {
 const Card = ({ titulo, link, descricao }: CardProps) => {
   return (
     <s.Container href={link}>
-      <img src={Logo} alt="Imagem Let's Dev" />
+      <img src={logo} alt="Imagem Let's Dev" />
       <a href={link}>{titulo}</a>
       {typeof descricao === "string" ? <p>{descricao}</p> : descricao}
     </s.Container>
