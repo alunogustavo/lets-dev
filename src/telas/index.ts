@@ -5,6 +5,16 @@ import Promise from "./chamadas-api/promise"
 import AsyncAwait from "./chamadas-api/async-await"
 import Home from "./home/home";
 import ConsumindoApis from "./consumindo-apis/consumindo-apis";
+import SobrePaipers from "./sobre-paipers/sobre-paipers";
 
 
-export { FormBasico, FormCompleto, Callback, Promise, AsyncAwait, Home, ConsumindoApis };
+export { 
+    FormBasico, 
+    FormCompleto, 
+    Callback, 
+    Promise, 
+    AsyncAwait, 
+    Home, 
+    ConsumindoApis, 
+    SobrePaipers 
+};

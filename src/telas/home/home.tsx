@@ -6,9 +6,13 @@ import {
   Card,
   InputButton,
 } from "../../componentes";
-import { Logo } from "../../imagens";
+import { logo } from "../../imagens";
+import { useContext } from "react";
+import { MyContext } from "../../componentes/contexto";
 
 const Home = () => {
+    const { setNomeUsuario, nomeUsuario } = useContext(MyContext);
+    
   const telas = [
     {
       titulo: "Formulário em HTML e CSS",
@@ -44,12 +48,14 @@ const Home = () => {
     },
   ];
 
+
+
   return (
     <s.Container>
       <Header />
       <s.Banner>
-        <h1>Que prazer te ver aqui, Fulano!</h1>
-        <img src={Logo} />
+        <h1>Que prazer te ver aqui, {nomeUsuario}!</h1>
+        <img src={logo} />
         <h2>
           Seja bem-vindo(a) ao Let’s Dev! O evento que vai transformar sua
           carreira.
@@ -75,7 +81,7 @@ const Home = () => {
         <TituloSecao titulo="Um pouco sobre mim..." />
 
         <s.Row>
-          <img src={Logo} />
+          <img src={logo} />
           <s.Column>
             <h3>Aqui vai o nome do(a) Dev</h3>
             <p>
@@ -97,6 +103,7 @@ const Home = () => {
                   //Aqui vai o seu perfil do linkedIn
                   window.open("https://www.linkedin.com", "_blank");
                 }}
+                title="Vai para o perfil do Linkedin"
               />
               <InputButton
                 type="submit"
@@ -105,6 +112,7 @@ const Home = () => {
                   //Aqui vai o seu perfil do GitHub
                   window.open("https://github.com", "_blank");
                 }}
+                title="Vai para o perfil no Github"
               />
             </s.ButtonGroup>
           </s.Column>

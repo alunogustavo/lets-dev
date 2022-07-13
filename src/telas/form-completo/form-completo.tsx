@@ -25,9 +25,9 @@ console.log("idade :>>", idade);
        }
     
       const cancelar = (event: FormEvent) => {
-
+        // Evita o redirecionamento padrão pra outra tela e manda um alert
     event.preventDefault();
-    alert("Cancelando...");
+    window.location.href = "/";
 };
 
    useEffect(() => {
@@ -144,7 +144,7 @@ console.log("idade :>>", idade);
                     type="file" 
                     name="curriculo"
                     value={curriculo}
-                    onChange={(e) => setCurriculo (e.target?.files[0])} 
+                    onChange={(e: { target: { files: any[]; }; }) => setCurriculo (e.target?.files[0])} 
                      />
                      </ColumnInput>
 
