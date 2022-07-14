@@ -9,19 +9,18 @@ interface Localidade {
 }
 
 const ConsumindoApis = () => {
-     const [CEP, setCEP] = useState("");
-     const [localidade, setLocalidade] = useState<Localidade>({});
+  const [CEP, setCEP] = useState("");
+  const [localidade, setLocalidade] = useState<Localidade>({});
 
   function buscarLocalidade(cep: string) {
     const baseURL = "https://viacep.com.br/ws";
 
     axios
-    .get(`${baseURL}/${cep}/json`)
-    .then((resposta) => console.log("RESPOSTA", resposta.data))
-    .catch((erro) => console.log("ERRO", erro));
+      .get(`${baseURL}/${cep}/json`)
+      .then((resposta) => console.log("RESPOSTA", resposta.data))
+      .catch((erro) => console.log("ERRO", erro));
   }
 
- 
   return (
     <s.Container>
       <Header />
@@ -75,15 +74,15 @@ const ConsumindoApis = () => {
               maxLength={8}
             />
           </ColumnInput>
-          <InputButton 
-          type="submit" 
-          value="Buscar" 
-          onClick={() => buscarLocalidade(CEP)} 
+          <InputButton
+            type="submit"
+            value="Buscar"
+            onClick={() => buscarLocalidade(CEP)}
           />
         </s.Row>
 
         <span>
-          <strong>Cidade pesquisada: </strong> {localidade.localidade} - 
+          <strong>Cidade pesquisada: </strong> {localidade.localidade} -
           {localidade.uf}
         </span>
       </s.Content>

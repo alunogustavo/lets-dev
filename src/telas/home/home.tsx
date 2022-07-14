@@ -11,8 +11,8 @@ import { useContext } from "react";
 import { MyContext } from "../../componentes/contexto";
 
 const Home = () => {
-    const { setNomeUsuario, nomeUsuario } = useContext(MyContext);
-    
+  const { setNomeUsuario, nomeUsuario } = useContext(MyContext);
+
   const telas = [
     {
       titulo: "Formulário em HTML e CSS",
@@ -48,8 +48,6 @@ const Home = () => {
     },
   ];
 
-
-
   return (
     <s.Container>
       <Header />
@@ -71,6 +69,7 @@ const Home = () => {
         <s.GroupCards>
           {telas.map((card) => (
             <Card
+              key={card.titulo}
               titulo={card.titulo}
               link={card.link}
               descricao={card.descricao}
