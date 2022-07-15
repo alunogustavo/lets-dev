@@ -6,7 +6,7 @@ import {
   Card,
   InputButton,
 } from "../../componentes";
-import { logo } from "../../imagens";
+import { logo, img_Gustavo } from "../../imagens";
 import { useContext } from "react";
 import { MyContext } from "../../componentes/contexto";
 
@@ -80,18 +80,15 @@ const Home = () => {
         <TituloSecao titulo="Um pouco sobre mim..." />
 
         <s.Row>
-          <img src={logo} />
+          <img src={img_Gustavo} />
           <s.Column>
-            <h3>Aqui vai o nome do(a) Dev</h3>
+            <h3>Meu nome é Gustavo Gessler Nigolino</h3>
             <p>
-              Este espaço é destinado à sua descrição de perfil. Conta aqui quem
-              você é, gostos, hobbies e o que achar interessante. Descreve
-              também as características profissionais e o que te motivou a
-              ingressar na área do desenvolviemento de software.
-            </p>
-            <p>
-              Você pode substituir a foto a lado pela sua melhor foto e colocar
-              suas redes nos botões abaixo!
+              Bom como disse acima, meu nome é Gustavo Gessler Nigolino, gosto de praticar esportes
+              , como futsal e vôlei, minha motivação para esse projeto foi aprender mais
+              afundo sobre o que era o Front-End, e consequentemente aprender e botar em pratica
+              o que foi ensinado, para que no futuro eu possa fazer alguma especialização nessa 
+              area 
             </p>
             <s.ButtonGroup>
               <InputButton

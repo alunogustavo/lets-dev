@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
                     />
                     </svg>
 
-                    <a href="https://github.com/uesleisuptitz/lets-dev" target="_blank"> 
+                    <a href="https://github.com/alunogustavo/lets-dev" target="_blank"> 
                     Repositorio Github
                      </a>
             </s.Row>

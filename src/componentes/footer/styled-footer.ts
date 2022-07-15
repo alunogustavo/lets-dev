@@ -5,8 +5,8 @@ export const Footer = styled.footer`
      justify-content: space-between;
      flex-wrap: wrap;
      gap: 30px;
-     width: 100%
-     backgorund: #231f20;
+     width: 100%;
+     background: #231f20;
      padding: 50px;
 `;
 
@@ -38,7 +38,7 @@ export const Column = styled.div`
         font-style: italic;
      }
 
-     p:nth-child (2) {
+     p:nth-child(2) {
         font-weight: 600;
      }
 `;

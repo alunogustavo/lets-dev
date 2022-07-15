@@ -74,8 +74,9 @@ const FormBasico: React.FC = () => {
             <label>Idade:</label>
             <input
               type="number"
-              name="Idade"
+              name="idade"
               placeholder="Digite sua Idade aqui"
+              required
             />
           </div>
         </div>
@@ -83,7 +84,7 @@ const FormBasico: React.FC = () => {
         <div className="row">
           <div className="column-input select">
             <label>Ocupação:</label>
-            <select name="Ocupação">
+            <select name="ocupacao">
               <option>Selecione sua Ocupação</option>
               <option>Estudante</option>
               <option>Trabalhador CLT</option>

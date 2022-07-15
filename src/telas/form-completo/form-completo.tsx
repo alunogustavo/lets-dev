@@ -43,7 +43,7 @@ const FormCompleto: React.FC = () => {
 
   return (
     <>
-      <s.Image src="{Banner}" alt="Imagem Lets-Dev" />
+    <s.Image src={Banner} alt="Imagem Let's Dev"/>
       <s.Container>
         <Titulo titulo="Formulario 2º Edição" />
 
@@ -150,13 +150,12 @@ const FormCompleto: React.FC = () => {
 
           {/*Aqui começa os botões textarea e checkbox*/}
           <ColumnInput>
-            <InputButton>Anexar curriculo:</InputButton>
+            <Label>Anexar curriculo:</Label>
             <InputButton
               type="file"
               name="curriculo"
               value={curriculo}
-              onChange={(e: { target: { files: any[] } }) =>
-                setCurriculo(e.target?.files[0])
+              onChange={(e) => setCurriculo(e.target.value)
               }
             />
           </ColumnInput>
@@ -186,7 +185,7 @@ const FormCompleto: React.FC = () => {
           </ColumnInput>
 
           <Row style={{ justifyContent: "space-between" }}>
-            <InputButton type="button" onClick={cancelar} value="Cancelar" />
+            <InputButton type="submit" value="Cancelar" />
             <InputButton type="submit" value="Enviar" />
           </Row>
         </s.Formulario>

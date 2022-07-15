@@ -71,7 +71,7 @@ export const Row = styled.div`
   gap: 30px;
 
   img {
-    width: 50%;
+    width: 30%;
   }
 
   @media (max-width: 767px) {
