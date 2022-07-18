@@ -16,7 +16,7 @@ const FormCompleto: React.FC = () => {
   const [idade, setIdade] = useState("");
   const [ocupacao, setOcupacao] = useState("");
   const [areaPreferencia, setareaPreferencia] = useState("Front-end");
-  const [curriculo, setCurriculo] = useState<any>("");
+  const [curriculo, setCurriculo] = useState<any>();
   const [descricaoPerfil, setDescricaoPerfil] = useState("");
   const [receberEmail, setReceberEmail] = useState(false);
   console.log("idade :>>", idade);
@@ -43,7 +43,7 @@ const FormCompleto: React.FC = () => {
 
   return (
     <>
-    <s.Image src={Banner} alt="Imagem Let's Dev"/>
+      <s.Image src={Banner} alt="Imagem Let's Dev" />
       <s.Container>
         <Titulo titulo="Formulario 2º Edição" />
 
@@ -154,13 +154,15 @@ const FormCompleto: React.FC = () => {
             <InputButton
               type="file"
               name="curriculo"
-              value={curriculo}
-              onChange={(e) => setCurriculo(e.target.value)
-              }
+              //value={curriculo}
+              onChange={(e) => setCurriculo(e.target ?.files[0])}
             />
           </ColumnInput>
 
-          <div className="column-input" style={{ marginBottom: "50px" }}>
+          <ColumnInput
+            className="column-input"
+            style={{ marginBottom: "50px" }}
+          >
             <Label>Descrição de perfil do candidato:</Label>
             <textarea
               name="descricao-perfil"
@@ -168,7 +170,8 @@ const FormCompleto: React.FC = () => {
               value={descricaoPerfil}
               onChange={(e) => setDescricaoPerfil(e.target.value)}
             ></textarea>
-          </div>
+          </ColumnInput>
+
           <ColumnInput style={{ marginBottom: "115px" }}>
             <RowSelectors>
               <input
@@ -185,7 +188,12 @@ const FormCompleto: React.FC = () => {
           </ColumnInput>
 
           <Row style={{ justifyContent: "space-between" }}>
-            <InputButton type="button" onClick={cancelar} value="Cancelar" outlined />
+            <InputButton
+              type="button"
+              onClick={cancelar}
+              value="Cancelar"
+              outlined
+            />
             <InputButton type="submit" value="Enviar" />
           </Row>
         </s.Formulario>
