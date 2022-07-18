@@ -185,7 +185,7 @@ const FormCompleto: React.FC = () => {
           </ColumnInput>
 
           <Row style={{ justifyContent: "space-between" }}>
-            <InputButton type="submit" value="Cancelar" />
+            <InputButton type="button" onClick={cancelar} value="Cancelar" outlined />
             <InputButton type="submit" value="Enviar" />
           </Row>
         </s.Formulario>
